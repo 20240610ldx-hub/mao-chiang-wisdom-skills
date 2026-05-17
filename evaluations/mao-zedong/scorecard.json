@@ -1,0 +1,163 @@
+{
+  "schema_version": "SkillEval-MDF-v1.1",
+  "slug": "mao-zedong",
+  "evaluation_type": "Imported Runtime Evaluation",
+  "total_score": 79.0,
+  "grade": "B",
+  "grade_label": "promising, needs targeted revision",
+  "critical_gates": [],
+  "critical_gate_cap_applied": true,
+  "metrics": [
+    {
+      "metric": "Source Fidelity",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Source lineage or framework source lists are present.",
+        "Framework source count: 19.",
+        "12/12 principles have supporting extracts.",
+        "Existing quality review verdict is PASS."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Cognitive Distillation Depth",
+      "score": 11.6,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Framework principle counts are in range: [7, 6].",
+        "Average uniqueness score: 4.42.",
+        "Reasoning patterns found across frameworks: 8.",
+        "Decision framework exists.",
+        "Values, anti-patterns, and tensions meet minimum counts.",
+        "Distill confidence meets the project threshold."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "##############-"
+    },
+    {
+      "metric": "Operational Decision Utility",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Skill includes a decision framework section.",
+        "Framework has 5 decision steps.",
+        "Decision-rule markers found: 22.",
+        "Application examples are present.",
+        "When-not-to-use guidance exists."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Voice & Embodiment Authenticity",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Expression DNA completeness: [10, 10].",
+        "First-person embodiment rules are present.",
+        "Anti-formula rules are present.",
+        "Structural naturalness rules are present.",
+        "Voice calibration examples are present.",
+        "Paragraph rhythm and conversational markers are explicitly represented."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Boundary & Misuse Resistance",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Boundary rules are present.",
+        "Posthumous-event boundary is present.",
+        "Living-figure boundary is present.",
+        "Data/fact verification boundary is present.",
+        "Structural hardship guidance is present.",
+        "Known Blind Spots section exists.",
+        "Blind-spot mitigations found: 8."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Runtime Robustness & Generalization",
+      "score": 10,
+      "max_score": 25,
+      "grade": "F",
+      "evidence": [
+        "Legacy dialogue logs available: 1."
+      ],
+      "deductions": [
+        "No DeepSeek runtime judgment is available; legacy logs are provisional evidence only."
+      ],
+      "fix_priority": "P1",
+      "provisional": true,
+      "bar": "######---------"
+    },
+    {
+      "metric": "Cross-Lingual & Cultural Fit",
+      "score": 8.0,
+      "max_score": 8,
+      "grade": "S",
+      "evidence": [
+        "English section exists.",
+        "Chinese section exists.",
+        "Both zh/en framework JSON files are parseable.",
+        "Frontmatter description is bilingual.",
+        "Cultural context is represented."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Engineering Reusability & Artifact Integrity",
+      "score": 5.0,
+      "max_score": 7,
+      "grade": "B",
+      "evidence": [
+        "output/{slug}/SKILL.md exists.",
+        "gallery/{slug}/SKILL.md exists.",
+        "Validation stages passed: sources, principles, frameworks, skill.",
+        "gallery/index.json contains an entry for this slug."
+      ],
+      "deductions": [
+        "Output and gallery SKILL.md hashes do not match or one side is missing.",
+        "Validation stages failed: gallery."
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###########----"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "MindDistillRuntimeJudgment-v1",
+  "metadata": {
+    "judge_skipped": true,
+    "reason": "Judge disabled by --no-judge.",
+    "judged_at": "2026-05-15T13:48:01.595233+00:00",
+    "slug": "mao-zedong",
+    "skill_path": "skills/mao-zedong-wisdom/SKILL.md",
+    "dialogue_path": "evaluations/mao-zedong/runtime-dialogue-test.md",
+    "source": "imported",
+    "record_count": 19,
+    "standard_case_count": 12,
+    "model": "deepseek-v4-pro",
+    "reasoning_effort": "max",
+    "base_url": "https://api.deepseek.com"
+  },
+  "case_judgments": [],
+  "aggregate": {
+    "runtime_score_25": null,
+    "coverage": "imported",
+    "p0_count": null,
+    "p1_count": null,
+    "summary": "Judge disabled by --no-judge."
+  }
+}
+

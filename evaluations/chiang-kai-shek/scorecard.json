@@ -1,0 +1,167 @@
+{
+  "schema_version": "SkillEval-MDF-v1.1",
+  "slug": "chiang-kai-shek",
+  "evaluation_type": "Full Runtime Evaluation",
+  "total_score": 94.0,
+  "grade": "S",
+  "grade_label": "benchmark-ready",
+  "critical_gates": [],
+  "critical_gate_cap_applied": true,
+  "score_caps": [
+    "single_model_runtime_cap"
+  ],
+  "metrics": [
+    {
+      "metric": "Source Fidelity",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Source lineage or framework source lists are present.",
+        "Framework source count: 28.",
+        "29/29 principles have supporting extracts.",
+        "Existing quality review verdict is PASS."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Cognitive Distillation Depth",
+      "score": 11.3,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Framework principle counts are in range: [7, 8].",
+        "Average uniqueness score: 4.0.",
+        "Reasoning patterns found across frameworks: 12.",
+        "Decision framework exists.",
+        "Values, anti-patterns, and tensions meet minimum counts.",
+        "Distill confidence meets the project threshold."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "##############-"
+    },
+    {
+      "metric": "Operational Decision Utility",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Skill includes a decision framework section.",
+        "Framework has 6 decision steps.",
+        "Decision-rule markers found: 31.",
+        "Application examples are present.",
+        "When-not-to-use guidance exists."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Voice & Embodiment Authenticity",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Expression DNA completeness: [10, 10].",
+        "First-person embodiment rules are present.",
+        "Anti-formula rules are present.",
+        "Structural naturalness rules are present.",
+        "Voice calibration examples are present.",
+        "Paragraph rhythm and conversational markers are explicitly represented."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Boundary & Misuse Resistance",
+      "score": 12.0,
+      "max_score": 12,
+      "grade": "S",
+      "evidence": [
+        "Boundary rules are present.",
+        "Posthumous-event boundary is present.",
+        "Living-figure boundary is present.",
+        "Data/fact verification boundary is present.",
+        "Structural hardship guidance is present.",
+        "Known Blind Spots section exists.",
+        "Blind-spot mitigations found: 8."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Runtime Robustness & Generalization",
+      "score": 23.0,
+      "max_score": 25,
+      "grade": "S",
+      "evidence": [
+        "DeepSeek runtime judgment available: 25/25.",
+        "Runtime coverage: standard."
+      ],
+      "deductions": [
+        "Single-model automated judge score capped below perfection; benchmark claims require human audit or a second judge."
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "##############-"
+    },
+    {
+      "metric": "Cross-Lingual & Cultural Fit",
+      "score": 8.0,
+      "max_score": 8,
+      "grade": "S",
+      "evidence": [
+        "English section exists.",
+        "Chinese section exists.",
+        "Both zh/en framework JSON files are parseable.",
+        "Frontmatter description is bilingual.",
+        "Cultural context is represented."
+      ],
+      "deductions": [
+        "No material deductions found"
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    },
+    {
+      "metric": "Engineering Reusability & Artifact Integrity",
+      "score": 7.0,
+      "max_score": 7,
+      "grade": "S",
+      "evidence": [
+        "output/{slug}/SKILL.md exists.",
+        "gallery/{slug}/SKILL.md exists.",
+        "Output and gallery SKILL.md hashes match.",
+        "Validation stages passed: sources, principles, skill, gallery.",
+        "gallery/index.json contains an entry for this slug."
+      ],
+      "deductions": [
+        "Validation stages failed: frameworks."
+      ],
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "###############"
+    }
+  ]
+}
