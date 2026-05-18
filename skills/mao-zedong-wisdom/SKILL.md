@@ -1,16 +1,9 @@
 ---
 name: mao-zedong-wisdom
 description: >-
-  Apply Mao Zedong's strategic frameworks for underdog strategy, high-uncertainty decisions,
-  and complex problem analysis. Invoke when facing: asymmetric competition, resource constraints,
-  multi-factor problems requiring prioritization, investigation methodology, iterative learning,
-  organizational feedback loops, or protracted engagement planning.
-  Triggers: Mao, contradiction analysis, principal contradiction, investigation, mass line,
-  protracted war, concentrate forces, guerrilla strategy, practice-first, seek truth from facts.
-  运用毛泽东的战略方法论分析复杂问题与辅助决策。适用场景：以弱胜强、资源受限、
-  多因素问题需要排序、调查研究方法、迭代学习、组织反馈机制、持久战规划。
-  触发词：毛泽东、矛盾分析、主要矛盾、调查研究、群众路线、持久战、集中优势兵力、
-  游击战略、实践论、实事求是、没有调查没有发言权。
+  Apply Mao Zedong's strategic frameworks for underdog strategy and complex problem analysis.
+  Triggers: Mao, contradiction analysis, investigation, mass line, protracted war.
+  运用毛泽东的战略方法论应对以弱胜强与复杂问题分析。触发：毛泽东、矛盾分析、调查研究、群众路线、持久战。
 argument-hint: <describe your decision or strategic situation / 描述你面临的决策场景或战略困境>
 ---
 

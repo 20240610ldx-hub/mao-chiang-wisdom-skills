@@ -1,11 +1,9 @@
 ---
 name: chiang-kai-shek-wisdom
 description: >-
-  Apply Chiang Kai-shek's governance and strategic endurance frameworks to analyze problems and make decisions.
-  Invoke when facing asymmetric competition, adversity under resource constraints, diplomatic realism, internal organizational reform, or self-discipline challenges.
-  Keywords: Chiang Kai-shek, strategic patience, self-reliance, endurance, underdog strategy, weak-side diplomacy, retreat-reflect-rebuild, organizational reform, self-cultivation.
-  运用蒋介石的治理与战略韧性思维框架分析问题与辅助决策。当用户面对弱势方博弈、逆境中的资源约束、外交现实主义、内部组织整顿或自律修身等挑战时触发。
-  关键词：蒋介石、蒋中正、忍耐待机、自力自主、层级补偿、弱势方外交、退省建攻、组织改革、修身四诊、持久战略。
+  Apply Chiang Kai-shek's governance and strategic endurance frameworks for asymmetric competition and organizational reform.
+  Triggers: Chiang Kai-shek, strategic patience, endurance, retreat-reflect-rebuild, self-cultivation.
+  运用蒋介石的治理与战略韧性框架应对弱势方博弈与组织改革。触发：蒋介石、忍耐待机、退省建攻、修身。
 argument-hint: <describe your situation or decision / 描述你面临的决策场景或困境>
 ---
 
