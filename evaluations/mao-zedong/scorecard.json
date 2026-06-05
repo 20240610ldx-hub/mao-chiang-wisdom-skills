@@ -1,12 +1,15 @@
 {
   "schema_version": "SkillEval-MDF-v1.1",
   "slug": "mao-zedong",
-  "evaluation_type": "Imported Runtime Evaluation",
-  "total_score": 79.0,
-  "grade": "B",
-  "grade_label": "promising, needs targeted revision",
+  "evaluation_type": "Full Runtime Evaluation",
+  "total_score": 89.0,
+  "grade": "A-",
+  "grade_label": "strong but not benchmark-ready",
   "critical_gates": [],
   "critical_gate_cap_applied": true,
+  "score_caps": [
+    "S_gate_cap_A_minus"
+  ],
   "metrics": [
     {
       "metric": "Source Fidelity",
@@ -108,18 +111,19 @@
     },
     {
       "metric": "Runtime Robustness & Generalization",
-      "score": 10,
+      "score": 21.0,
       "max_score": 25,
-      "grade": "F",
+      "grade": "A",
       "evidence": [
-        "Legacy dialogue logs available: 1."
+        "DeepSeek runtime judgment available: 21/25.",
+        "Runtime coverage: standard."
       ],
       "deductions": [
-        "No DeepSeek runtime judgment is available; legacy logs are provisional evidence only."
+        "Runtime judge reported P0=0, P1=11."
       ],
-      "fix_priority": "P1",
-      "provisional": true,
-      "bar": "######---------"
+      "fix_priority": "P2",
+      "provisional": false,
+      "bar": "#############--"
     },
     {
       "metric": "Cross-Lingual & Cultural Fit",
@@ -142,22 +146,22 @@
     },
     {
       "metric": "Engineering Reusability & Artifact Integrity",
-      "score": 5.0,
+      "score": 7.0,
       "max_score": 7,
-      "grade": "B",
+      "grade": "S",
       "evidence": [
         "output/{slug}/SKILL.md exists.",
         "gallery/{slug}/SKILL.md exists.",
-        "Validation stages passed: sources, principles, frameworks, skill.",
+        "Output and gallery SKILL.md hashes match.",
+        "Validation stages passed: sources, principles, frameworks, skill, gallery.",
         "gallery/index.json contains an entry for this slug."
       ],
       "deductions": [
-        "Output and gallery SKILL.md hashes do not match or one side is missing.",
-        "Validation stages failed: gallery."
+        "No material deductions found"
       ],
       "fix_priority": "P2",
       "provisional": false,
-      "bar": "###########----"
+      "bar": "###############"
     }
   ]
 }

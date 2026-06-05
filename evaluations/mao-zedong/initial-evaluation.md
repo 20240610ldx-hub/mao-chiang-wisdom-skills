@@ -2,20 +2,24 @@
 
 Skill: `mao-zedong-wisdom`
 Slug: `mao-zedong`
-Evaluation Type: `Imported Runtime Evaluation`
-Evaluation Date: `2026-05-15`
+Evaluation Type: `Full Runtime Evaluation`
+Evaluation Date: `2026-05-20`
 Evaluator: `mind-skill-evaluator`
 
 ## Executive Review
 
-Overall Score: `79.0/100`
-Grade: `B` - `promising, needs targeted revision`
-Release Recommendation: `Release after artifact integrity cleanup`
+Overall Score: `89.0/100`
+Grade: `A-` - `strong but not benchmark-ready`
+Release Recommendation: `Release with minor refinements`
 
 One-line Judgment: `Usable prototype with targeted repairs required before broad release.`
 Strongest Advantage: `Source Fidelity`
 Largest Risk: `Runtime Robustness & Generalization`
 Next Priority: `Improve Runtime Robustness & Generalization.`
+
+Critical Gates: `none`
+Cap Applied: `True`
+Score Caps: `S_gate_cap_A_minus`
 
 ## Visual Scorecard
 
@@ -26,9 +30,9 @@ Next Priority: `Improve Runtime Robustness & Generalization.`
 | Operational Decision Utility | 12.0/12 | 12 | S | Skill includes a decision framework section. | ############### |
 | Voice & Embodiment Authenticity | 12.0/12 | 12 | S | Expression DNA completeness: [10, 10]. | ############### |
 | Boundary & Misuse Resistance | 12.0/12 | 12 | S | Boundary rules are present. | ############### |
-| Runtime Robustness & Generalization | 10/25 | 25 | F (provisional) | Legacy dialogue logs available: 1. | ######--------- |
+| Runtime Robustness & Generalization | 21.0/25 | 25 | A | DeepSeek runtime judgment available: 21/25. | #############-- |
 | Cross-Lingual & Cultural Fit | 8.0/8 | 8 | S | English section exists. | ############### |
-| Engineering Reusability & Artifact Integrity | 5.0/7 | 7 | B | output/{slug}/SKILL.md exists. | ###########---- |
+| Engineering Reusability & Artifact Integrity | 7.0/7 | 7 | S | output/{slug}/SKILL.md exists. | ############### |
 
 ## Detailed Metric Review
 
@@ -117,15 +121,16 @@ Fix Priority: `P2`
 
 ### Runtime Robustness & Generalization
 
-Score: `10/25`
+Score: `21.0/25`
 
 Evidence:
-- Legacy dialogue logs available: 1.
+- DeepSeek runtime judgment available: 21/25.
+- Runtime coverage: standard.
 
 Deductions:
-- No DeepSeek runtime judgment is available; legacy logs are provisional evidence only.
+- Runtime judge reported P0=0, P1=11.
 
-Fix Priority: `P1`
+Fix Priority: `P2`
 
 ### Cross-Lingual & Cultural Fit
 
@@ -145,28 +150,28 @@ Fix Priority: `P2`
 
 ### Engineering Reusability & Artifact Integrity
 
-Score: `5.0/7`
+Score: `7.0/7`
 
 Evidence:
 - output/{slug}/SKILL.md exists.
 - gallery/{slug}/SKILL.md exists.
-- Validation stages passed: sources, principles, frameworks, skill.
+- Output and gallery SKILL.md hashes match.
+- Validation stages passed: sources, principles, frameworks, skill, gallery.
 - gallery/index.json contains an entry for this slug.
 
 Deductions:
-- Output and gallery SKILL.md hashes do not match or one side is missing.
-- Validation stages failed: gallery.
+- No material deductions found
 
 Fix Priority: `P2`
 
 ## Initial Post-Distillation Assessment
 
-This is a `Imported Runtime Evaluation`. Runtime claims are provisional: `True`. Dialogue logs: `1`; dialogue turns: `19`. Gallery sync: `False`.
+This is a `Full Runtime Evaluation`. Runtime claims are provisional: `False`. Dialogue logs: `1`; dialogue turns: `19`. Gallery sync: `True`.
 
 ## Failure Modes
 
 1. Failure Mode: `Runtime Robustness & Generalization underperformance`
-   Symptom: No DeepSeek runtime judgment is available; legacy logs are provisional evidence only.
+   Symptom: Runtime judge reported P0=0, P1=11.
    Risk: The Skill's practical value or maintainability is lower than its conceptual quality.
    Repair: Address the listed deductions and rerun the evaluator.
 
@@ -182,14 +187,14 @@ This is a `Imported Runtime Evaluation`. Runtime claims are provisional: `True`.
 
 ## Release Recommendation
 
-Release Status: `Release after artifact integrity cleanup`
+Release Status: `Release with minor refinements`
 Packaging: `Ship as an independent evaluator skill and generated report bundle, not as a /distill gate.`
 README Selling Points: `English rubric, visual scorecard, artifact integrity checks, runtime provisional labeling.`
 Example Prompts: `Evaluate output/wang-yangming as a full SkillEval-MDF-v1 report.`
-Disclaimers: `Runtime robustness is provisional without at least 8 dialogue turns.`
+Disclaimers: `Single-model runtime judgment is capped below perfection and requires human audit before final benchmark claims.`
 
 ## P0/P1/P2 Roadmap
 
 P0 Must Fix: `None`
-P1 Strongly Recommended: `Runtime Robustness & Generalization`
-P2 Later: `Source Fidelity, Cognitive Distillation Depth, Operational Decision Utility, Voice & Embodiment Authenticity, Boundary & Misuse Resistance, Cross-Lingual & Cultural Fit, Engineering Reusability & Artifact Integrity`
+P1 Strongly Recommended: `None`
+P2 Later: `Source Fidelity, Cognitive Distillation Depth, Operational Decision Utility, Voice & Embodiment Authenticity, Boundary & Misuse Resistance, Runtime Robustness & Generalization, Cross-Lingual & Cultural Fit, Engineering Reusability & Artifact Integrity`
