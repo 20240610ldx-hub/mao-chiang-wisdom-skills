@@ -57,7 +57,7 @@
       "evidence": [
         "Skill includes a decision framework section.",
         "Framework has 6 decision steps.",
-        "Decision-rule markers found: 31.",
+        "Decision-rule markers found: 30.",
         "Application examples are present.",
         "When-not-to-use guidance exists."
       ],
@@ -153,11 +153,11 @@
         "output/{slug}/SKILL.md exists.",
         "gallery/{slug}/SKILL.md exists.",
         "Output and gallery SKILL.md hashes match.",
-        "Validation stages passed: sources, principles, skill, gallery.",
+        "Validation stages passed: sources, principles, frameworks, skill, gallery.",
         "gallery/index.json contains an entry for this slug."
       ],
       "deductions": [
-        "Validation stages failed: frameworks."
+        "No material deductions found"
       ],
       "fix_priority": "P2",
       "provisional": false,

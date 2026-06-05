@@ -3,7 +3,7 @@
 Skill: `chiang-kai-shek-wisdom`
 Slug: `chiang-kai-shek`
 Evaluation Type: `Full Runtime Evaluation`
-Evaluation Date: `2026-05-17`
+Evaluation Date: `2026-05-20`
 Evaluator: `mind-skill-evaluator`
 
 ## Executive Review
@@ -75,7 +75,7 @@ Score: `12.0/12`
 Evidence:
 - Skill includes a decision framework section.
 - Framework has 6 decision steps.
-- Decision-rule markers found: 31.
+- Decision-rule markers found: 30.
 - Application examples are present.
 - When-not-to-use guidance exists.
 
@@ -156,11 +156,11 @@ Evidence:
 - output/{slug}/SKILL.md exists.
 - gallery/{slug}/SKILL.md exists.
 - Output and gallery SKILL.md hashes match.
-- Validation stages passed: sources, principles, skill, gallery.
+- Validation stages passed: sources, principles, frameworks, skill, gallery.
 - gallery/index.json contains an entry for this slug.
 
 Deductions:
-- Validation stages failed: frameworks.
+- No material deductions found
 
 Fix Priority: `P2`
 

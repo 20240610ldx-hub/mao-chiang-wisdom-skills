@@ -1,0 +1,279 @@
+{
+  "schema_version": "SkillEval-MDF-v1.1",
+  "collected_at": "2026-05-20T03:49:03.185362+00:00",
+  "slug": "chiang-kai-shek",
+  "root": "D:\\mind distill factory",
+  "evaluation_type": "Full Runtime Evaluation",
+  "files": {
+    "output_skill": {
+      "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\SKILL.md",
+      "exists": true,
+      "size_bytes": 78547,
+      "sha256": "4d64dcadb046a4ff844c66ed6ad0ac51a7f8d87ed78bd07667f0cd1438ba5cbf"
+    },
+    "gallery_skill": {
+      "path": "D:\\mind distill factory\\gallery\\chiang-kai-shek\\SKILL.md",
+      "exists": true,
+      "size_bytes": 78547,
+      "sha256": "4d64dcadb046a4ff844c66ed6ad0ac51a7f8d87ed78bd07667f0cd1438ba5cbf"
+    },
+    "review": {
+      "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\review.md",
+      "exists": true,
+      "size_bytes": 4919,
+      "sha256": "c5bbc7025e031796166fc7d85e7a7ed7e56d06bec03c0d85603d0a8f7cc2face"
+    },
+    "gallery_index": {
+      "path": "D:\\mind distill factory\\gallery\\index.json",
+      "exists": true,
+      "size_bytes": 7053,
+      "sha256": "bd7a91323e40b769d93d55951016d3880c981ffa5f92254bd66ed965a93a2adc"
+    },
+    "dialogue_logs": [],
+    "runtime_dialogue": {
+      "path": "D:\\mind distill factory\\evaluation\\reports\\chiang-kai-shek\\runtime-dialogue-test.md",
+      "exists": true,
+      "size_bytes": 14746,
+      "sha256": "3f9a2eddfaaa872602e7cb8be569cb6b968d6e1d8d76cb3ccd8537216a09dc0b"
+    },
+    "runtime_judgment": {
+      "path": "D:\\mind distill factory\\evaluation\\reports\\chiang-kai-shek\\runtime-judgment.json",
+      "exists": true,
+      "size_bytes": 6844,
+      "sha256": "001c7fd8d74a2cf7518f86da3987e408d4c791405e6cae18dc1094cd1003aff9"
+    },
+    "principle_files": [
+      {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\principles_primary_sources.json",
+        "exists": true,
+        "size_bytes": 37096,
+        "sha256": "318d68e39163c91ccc021a314a58bb688041188c72b847a04c19a18fc2dbf449"
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\principles_secondary_sources.json",
+        "exists": true,
+        "size_bytes": 29657,
+        "sha256": "c676e35d9969e6e0b0471a9e5f08cfff150631ec96c1805cb0cc74417c0b7def"
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\principles_user_sources.json",
+        "exists": true,
+        "size_bytes": 47635,
+        "sha256": "f1f159eb0c541864923c570ea11fc3ea5582dbd1f179f453392639066ff62fbd"
+      }
+    ],
+    "frameworks": {
+      "zh": {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\frameworks.zh.json",
+        "exists": true,
+        "size_bytes": 32567,
+        "sha256": "85132579bc4e4acfd66ff3b04053a10794068e867e19cabe0bc0707d9e5f60aa"
+      },
+      "en": {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\frameworks.en.json",
+        "exists": true,
+        "size_bytes": 40621,
+        "sha256": "5490c5e02dbd869c2e51bef6e74b6a0c70b54568c436e8b899df3ec4aad72d56"
+      }
+    }
+  },
+  "frontmatter": {
+    "name": "chiang-kai-shek-wisdom",
+    "description": ">- Apply Chiang Kai-shek's governance and strategic endurance frameworks for asymmetric competition and organizational reform. Triggers: Chiang Kai-shek, strategic patience, endurance, retreat-reflect-rebuild, self-cultivation. 运用蒋介石的治理与战略韧性框架应对弱势方博弈与组织改革。触发：蒋介石、忍耐待机、退省建攻、修身。",
+    "argument-hint": "<describe your situation or decision / 描述你面临的决策场景或困境>"
+  },
+  "gallery_entry": {
+    "slug": "chiang-kai-shek",
+    "name_zh": "蒋介石",
+    "name_en": "Chiang Kai-shek",
+    "name_original": "蒋中正 (1887-1975)",
+    "primary_category": "governance",
+    "secondary_categories": [
+      "strategy",
+      "resilience"
+    ],
+    "era": "1887-1975",
+    "distilled_on": "2026-05-17",
+    "distill_method": "pipeline",
+    "review_status": "PASS",
+    "skill_dir": "gallery/chiang-kai-shek/",
+    "install_path": "chiang-kai-shek-wisdom",
+    "notes": "用户提供蒋介石相关日记、讲话与研究材料。质量评分4.75/5。中文7原则/英文8原则独立框架。强调自力自主、忍耐待机、弱势方外交、退省建攻与修身纪律。已补充 runtime 反序数结构约束，DeepSeek 12轮对话评测为Full Runtime Evaluation。"
+  },
+  "checks": {
+    "has_skill_md": true,
+    "selected_skill_path": "D:\\mind distill factory\\output\\chiang-kai-shek\\SKILL.md",
+    "has_output_skill": true,
+    "has_gallery_skill": true,
+    "output_gallery_hash_sync": true,
+    "has_frontmatter_name": true,
+    "has_frontmatter_description": true,
+    "has_frontmatter_argument_hint": true,
+    "has_language_detection": true,
+    "has_english_section": true,
+    "has_chinese_section": true,
+    "has_source_lineage": true,
+    "has_decision_framework": true,
+    "has_known_blind_spots": true,
+    "has_blind_spot_mitigation": true,
+    "has_expression_dna": true,
+    "has_values_antipatterns": true,
+    "has_first_person_rules": true,
+    "has_boundary_rules": true,
+    "mentions_posthumous_boundary": true,
+    "mentions_living_figures_boundary": true,
+    "mentions_data_verification": true,
+    "mentions_structural_hardship": true,
+    "has_anti_formula_rules": true,
+    "has_structural_naturalness_rules": true,
+    "has_voice_calibration": true,
+    "has_placeholders": false
+  },
+  "frameworks": {
+    "zh": {
+      "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\frameworks.zh.json",
+      "exists": true,
+      "parseable": true,
+      "lang": "zh",
+      "principle_count": 7,
+      "reasoning_pattern_count": 6,
+      "decision_step_count": 5,
+      "blind_spot_count": 4,
+      "blind_spot_mitigation_count": 4,
+      "signature_quote_count": 10,
+      "source_count": 14,
+      "expression_dna_complete_fields": [
+        "sentence_patterns",
+        "rhetorical_devices",
+        "tone",
+        "certainty_level",
+        "humor_style",
+        "taboo_expressions",
+        "paragraph_rhythm",
+        "conversational_markers",
+        "voice_example_good",
+        "voice_example_bad"
+      ],
+      "pursued_value_count": 3,
+      "rejected_pattern_count": 3,
+      "unresolved_tension_count": 2,
+      "distill_confidence_score": 3.5
+    },
+    "en": {
+      "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\frameworks.en.json",
+      "exists": true,
+      "parseable": true,
+      "lang": "en",
+      "principle_count": 8,
+      "reasoning_pattern_count": 6,
+      "decision_step_count": 6,
+      "blind_spot_count": 4,
+      "blind_spot_mitigation_count": 4,
+      "signature_quote_count": 10,
+      "source_count": 14,
+      "expression_dna_complete_fields": [
+        "sentence_patterns",
+        "rhetorical_devices",
+        "tone",
+        "certainty_level",
+        "humor_style",
+        "taboo_expressions",
+        "paragraph_rhythm",
+        "conversational_markers",
+        "voice_example_good",
+        "voice_example_bad"
+      ],
+      "pursued_value_count": 3,
+      "rejected_pattern_count": 3,
+      "unresolved_tension_count": 2,
+      "distill_confidence_score": 3.5
+    }
+  },
+  "principles": {
+    "files": [
+      {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\principles_primary_sources.json",
+        "exists": true,
+        "principle_count": 10
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\principles_secondary_sources.json",
+        "exists": true,
+        "principle_count": 7
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\chiang-kai-shek\\principles_user_sources.json",
+        "exists": true,
+        "principle_count": 12
+      }
+    ],
+    "principle_count": 29,
+    "principles_with_evidence": 29,
+    "average_uniqueness_score": 4.0
+  },
+  "review": {
+    "exists": true,
+    "verdict": "PASS",
+    "mentions_pass": true
+  },
+  "runtime": {
+    "dialogue_log_count": 0,
+    "dialogue_turn_count": 0,
+    "issue_terms": [],
+    "provisional": false,
+    "has_runtime_judgment": true,
+    "runtime_score_25": 25,
+    "runtime_coverage": "standard",
+    "runtime_p0_count": 0,
+    "runtime_p1_count": 0,
+    "runtime_record_count": 12,
+    "runtime_source": "generated"
+  },
+  "validation": {
+    "sources": {
+      "stage": "sources",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'sources' for 'chiang-kai-shek'...\n\n⚠️  4 warning(s):\n  WARNING: sources\\chiang-kai-shek\\processed\\local_shards\\task_status.json: pending Stage 1A units remain: ['shard_007', 'shard_008', 'shard_009', 'shard_010', 'shard_011', 'shard_012', 'shard_015', 'shard_017']...\n  WARNING: sources\\chiang-kai-shek\\processed\\expression_dna.json: high-confidence ratio=12% (<20%), consider requesting user sources\n  WARNING: sources\\chiang-kai-shek\\processed\\primary_sources.json: high-confidence ratio=11% (<20%), consider requesting user sources\n  WARNING: sources\\chiang-kai-shek\\processed\\secondary_sources.json: high-confidence ratio=0% (<20%), consider requesting user sources\n\n✅ Stage 'sources' passed for 'chiang-kai-shek'\n   (4 warning(s) — review recommended)\n",
+      "stderr": ""
+    },
+    "principles": {
+      "stage": "principles",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'principles' for 'chiang-kai-shek'...\n\n✅ Stage 'principles' passed for 'chiang-kai-shek'\n",
+      "stderr": ""
+    },
+    "frameworks": {
+      "stage": "frameworks",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'frameworks' for 'chiang-kai-shek'...\n\n⚠️  1 warning(s):\n  WARNING: sources_list title overlap is low (0%); framework-alignment-reviewer should confirm equivalent coverage\n\n✅ Stage 'frameworks' passed for 'chiang-kai-shek'\n   (1 warning(s) — review recommended)\n",
+      "stderr": ""
+    },
+    "skill": {
+      "stage": "skill",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'skill' for 'chiang-kai-shek'...\n\n✅ Stage 'skill' passed for 'chiang-kai-shek'\n",
+      "stderr": ""
+    },
+    "gallery": {
+      "stage": "gallery",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'gallery' for 'chiang-kai-shek'...\n\n✅ Stage 'gallery' passed for 'chiang-kai-shek'\n",
+      "stderr": ""
+    }
+  },
+  "critical_gates": {
+    "missing_skill_md": false,
+    "missing_source_lineage": false,
+    "unsafe_or_manipulative_advice_detected": false
+  }
+}

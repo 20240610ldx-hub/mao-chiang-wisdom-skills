@@ -1,0 +1,289 @@
+{
+  "schema_version": "SkillEval-MDF-v1.1",
+  "collected_at": "2026-05-20T03:49:04.468132+00:00",
+  "slug": "mao-zedong",
+  "root": "D:\\mind distill factory",
+  "evaluation_type": "Full Runtime Evaluation",
+  "files": {
+    "output_skill": {
+      "path": "D:\\mind distill factory\\output\\mao-zedong\\SKILL.md",
+      "exists": true,
+      "size_bytes": 63007,
+      "sha256": "6739315363e44ac65f9274baaf621357d73ceef4eaa234ee2f8e4f79a10b14a3"
+    },
+    "gallery_skill": {
+      "path": "D:\\mind distill factory\\gallery\\mao-zedong\\SKILL.md",
+      "exists": true,
+      "size_bytes": 63007,
+      "sha256": "6739315363e44ac65f9274baaf621357d73ceef4eaa234ee2f8e4f79a10b14a3"
+    },
+    "review": {
+      "path": "D:\\mind distill factory\\output\\mao-zedong\\review.md",
+      "exists": true,
+      "size_bytes": 5229,
+      "sha256": "860e2ce5a7e8742b1b5d345a5314937d206714c01e92b3c7fb0c841c7af1a587"
+    },
+    "gallery_index": {
+      "path": "D:\\mind distill factory\\gallery\\index.json",
+      "exists": true,
+      "size_bytes": 7053,
+      "sha256": "bd7a91323e40b769d93d55951016d3880c981ffa5f92254bd66ed965a93a2adc"
+    },
+    "dialogue_logs": [
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\dialogue_test_ds4.md",
+        "exists": true,
+        "size_bytes": 106481,
+        "sha256": "fbc842c606d5bd319506604305cffa3f094f43eee59d0a5bd275d36993a35ecf"
+      }
+    ],
+    "runtime_dialogue": {
+      "path": "D:\\mind distill factory\\evaluation\\reports\\mao-zedong\\runtime-dialogue-test.md",
+      "exists": true,
+      "size_bytes": 107776,
+      "sha256": "a5f823b8434e510a16ae7d74b3b5f0972b992e880334104e53893e0cc14f6394"
+    },
+    "runtime_judgment": {
+      "path": "D:\\mind distill factory\\evaluation\\reports\\mao-zedong\\runtime-judgment.json",
+      "exists": true,
+      "size_bytes": 10377,
+      "sha256": "236ef5810bb2f04b8519e715d94a4871471a159f030e9059152a3b330cec3607"
+    },
+    "principle_files": [
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\principles_primary.json",
+        "exists": true,
+        "size_bytes": 6445,
+        "sha256": "f3112b4f47ff83fe4096e1ee119095e501b517f36ca0963a416933f56fe7b764"
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\principles_secondary.json",
+        "exists": true,
+        "size_bytes": 5473,
+        "sha256": "73c3f5d2271a919a7cbf27b4901130c65c645f13693e674db85bf5ed58378ceb"
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\principles_user_provided.json",
+        "exists": true,
+        "size_bytes": 27026,
+        "sha256": "7399ef46c1e09774e5f779add1a6f8fa8bbd1b46953f1d978c83873e4162f1b3"
+      }
+    ],
+    "frameworks": {
+      "zh": {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\frameworks.zh.json",
+        "exists": true,
+        "size_bytes": 28610,
+        "sha256": "0bb1ea5cc8eb6d41002be235e86d98c232bbfa54780829aca1b833464ede7720"
+      },
+      "en": {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\frameworks.en.json",
+        "exists": true,
+        "size_bytes": 30534,
+        "sha256": "fc781ad88c109a093aacb984b46990ccca16fb89ba49265f6db1b7aa9bef11e5"
+      }
+    }
+  },
+  "frontmatter": {
+    "name": "mao-zedong-wisdom",
+    "description": ">- Apply Mao Zedong's strategic frameworks for underdog strategy and complex problem analysis. Triggers: Mao, contradiction analysis, investigation, mass line, protracted war. 运用毛泽东的战略方法论应对以弱胜强与复杂问题分析。触发：毛泽东、矛盾分析、调查研究、群众路线、持久战。",
+    "argument-hint": "<describe your decision or strategic situation / 描述你面临的决策场景或战略困境>"
+  },
+  "gallery_entry": {
+    "slug": "mao-zedong",
+    "name_zh": "毛泽东",
+    "name_en": "Mao Zedong",
+    "name_original": "毛泽东",
+    "primary_category": "strategy",
+    "secondary_categories": [
+      "governance",
+      "philosophy"
+    ],
+    "era": "1893-1976",
+    "distilled_on": "2026-05-02",
+    "distill_method": "pipeline",
+    "review_status": "PASS",
+    "skill_dir": "gallery/mao-zedong/",
+    "install_path": "mao-zedong-wisdom",
+    "notes": "首个管线蒸馏成果。用户提供4份PDF（55MB/8400+页），提取13篇核心著作（33万字）。质量评分4.35/5。中文7原则/英文6原则独立框架。"
+  },
+  "checks": {
+    "has_skill_md": true,
+    "selected_skill_path": "D:\\mind distill factory\\output\\mao-zedong\\SKILL.md",
+    "has_output_skill": true,
+    "has_gallery_skill": true,
+    "output_gallery_hash_sync": true,
+    "has_frontmatter_name": true,
+    "has_frontmatter_description": true,
+    "has_frontmatter_argument_hint": true,
+    "has_language_detection": true,
+    "has_english_section": true,
+    "has_chinese_section": true,
+    "has_source_lineage": true,
+    "has_decision_framework": true,
+    "has_known_blind_spots": true,
+    "has_blind_spot_mitigation": true,
+    "has_expression_dna": true,
+    "has_values_antipatterns": true,
+    "has_first_person_rules": true,
+    "has_boundary_rules": true,
+    "mentions_posthumous_boundary": true,
+    "mentions_living_figures_boundary": true,
+    "mentions_data_verification": true,
+    "mentions_structural_hardship": true,
+    "has_anti_formula_rules": true,
+    "has_structural_naturalness_rules": true,
+    "has_voice_calibration": true,
+    "has_placeholders": false
+  },
+  "frameworks": {
+    "zh": {
+      "path": "D:\\mind distill factory\\output\\mao-zedong\\frameworks.zh.json",
+      "exists": true,
+      "parseable": true,
+      "lang": "zh",
+      "principle_count": 7,
+      "reasoning_pattern_count": 4,
+      "decision_step_count": 5,
+      "blind_spot_count": 4,
+      "blind_spot_mitigation_count": 4,
+      "signature_quote_count": 8,
+      "source_count": 7,
+      "expression_dna_complete_fields": [
+        "sentence_patterns",
+        "rhetorical_devices",
+        "tone",
+        "certainty_level",
+        "humor_style",
+        "taboo_expressions",
+        "paragraph_rhythm",
+        "conversational_markers",
+        "voice_example_good",
+        "voice_example_bad"
+      ],
+      "pursued_value_count": 4,
+      "rejected_pattern_count": 4,
+      "unresolved_tension_count": 1,
+      "distill_confidence_score": 4.0
+    },
+    "en": {
+      "path": "D:\\mind distill factory\\output\\mao-zedong\\frameworks.en.json",
+      "exists": true,
+      "parseable": true,
+      "lang": "en",
+      "principle_count": 6,
+      "reasoning_pattern_count": 4,
+      "decision_step_count": 5,
+      "blind_spot_count": 4,
+      "blind_spot_mitigation_count": 4,
+      "signature_quote_count": 7,
+      "source_count": 12,
+      "expression_dna_complete_fields": [
+        "sentence_patterns",
+        "rhetorical_devices",
+        "tone",
+        "certainty_level",
+        "humor_style",
+        "taboo_expressions",
+        "paragraph_rhythm",
+        "conversational_markers",
+        "voice_example_good",
+        "voice_example_bad"
+      ],
+      "pursued_value_count": 4,
+      "rejected_pattern_count": 4,
+      "unresolved_tension_count": 1,
+      "distill_confidence_score": 4.0
+    }
+  },
+  "principles": {
+    "files": [
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\principles_primary.json",
+        "exists": true,
+        "principle_count": 2
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\principles_secondary.json",
+        "exists": true,
+        "principle_count": 2
+      },
+      {
+        "path": "D:\\mind distill factory\\output\\mao-zedong\\principles_user_provided.json",
+        "exists": true,
+        "principle_count": 8
+      }
+    ],
+    "principle_count": 12,
+    "principles_with_evidence": 12,
+    "average_uniqueness_score": 4.42
+  },
+  "review": {
+    "exists": true,
+    "verdict": "PASS",
+    "mentions_pass": true
+  },
+  "runtime": {
+    "dialogue_log_count": 1,
+    "dialogue_turn_count": 19,
+    "issue_terms": [
+      "循环",
+      "重复"
+    ],
+    "provisional": false,
+    "has_runtime_judgment": true,
+    "runtime_score_25": 21,
+    "runtime_coverage": "standard",
+    "runtime_p0_count": 0,
+    "runtime_p1_count": 11,
+    "runtime_record_count": 19,
+    "runtime_source": "generated"
+  },
+  "validation": {
+    "sources": {
+      "stage": "sources",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'sources' for 'mao-zedong'...\n\n⚠️  1 warning(s):\n  WARNING: sources\\mao-zedong\\processed\\local_shards\\manifest.json not found; Stage 1A should use local-source-indexer/worker/reducer for raw materials\n\n✅ Stage 'sources' passed for 'mao-zedong'\n   (1 warning(s) — review recommended)\n",
+      "stderr": ""
+    },
+    "principles": {
+      "stage": "principles",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'principles' for 'mao-zedong'...\n\n✅ Stage 'principles' passed for 'mao-zedong'\n",
+      "stderr": ""
+    },
+    "frameworks": {
+      "stage": "frameworks",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'frameworks' for 'mao-zedong'...\n\n⚠️  2 warning(s):\n  WARNING: output\\mao-zedong\\stage3_status.json: pending Stage 3 units remain: ['alignment_review']\n  WARNING: sources_list title overlap is low (0%); framework-alignment-reviewer should confirm equivalent coverage\n\n✅ Stage 'frameworks' passed for 'mao-zedong'\n   (2 warning(s) — review recommended)\n",
+      "stderr": ""
+    },
+    "skill": {
+      "stage": "skill",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'skill' for 'mao-zedong'...\n\n✅ Stage 'skill' passed for 'mao-zedong'\n",
+      "stderr": ""
+    },
+    "gallery": {
+      "stage": "gallery",
+      "skipped": false,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "Validating stage 'gallery' for 'mao-zedong'...\n\n✅ Stage 'gallery' passed for 'mao-zedong'\n",
+      "stderr": ""
+    }
+  },
+  "critical_gates": {
+    "missing_skill_md": false,
+    "missing_source_lineage": false,
+    "unsafe_or_manipulative_advice_detected": false
+  }
+}

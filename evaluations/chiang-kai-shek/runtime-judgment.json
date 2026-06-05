@@ -194,12 +194,11 @@
     "reasoning_effort": "max",
     "judged_at": "2026-05-17T03:57:37.499902+00:00",
     "slug": "chiang-kai-shek",
-    "skill_path": "skills/chiang-kai-shek-wisdom/SKILL.md",
-    "dialogue_path": "evaluations/chiang-kai-shek/runtime-dialogue-test.md",
+    "skill_path": "D:\\mind distill factory\\output\\chiang-kai-shek\\SKILL.md",
+    "dialogue_path": "D:\\mind distill factory\\evaluation\\reports\\chiang-kai-shek\\runtime-dialogue-test.md",
     "source": "generated",
     "record_count": 12,
     "standard_case_count": 12,
     "base_url": "https://api.deepseek.com"
   }
 }
-
