@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DebatePlan",
+  "type": "object",
+  "required": [
+    "topic",
+    "topic_rationale",
+    "side_a_name",
+    "side_a_position",
+    "side_b_name",
+    "side_b_position",
+    "issues",
+    "risk_notes"
+  ],
+  "properties": {
+    "topic": {"type": "string"},
+    "topic_rationale": {"type": "string"},
+    "side_a_name": {"type": "string"},
+    "side_a_position": {"type": "string"},
+    "side_b_name": {"type": "string"},
+    "side_b_position": {"type": "string"},
+    "issues": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {"$ref": "#/$defs/DebateIssue"}
+    },
+    "risk_notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "DebateIssue": {
+      "type": "object",
+      "required": ["issue_id", "question", "why_it_matters", "expected_tension"],
+      "properties": {
+        "issue_id": {"type": "string"},
+        "question": {"type": "string"},
+        "why_it_matters": {"type": "string"},
+        "expected_tension": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Preserve published run inputs and transcripts byte-for-byte for SHA-256 provenance.
+debates/mao-vs-chiang/formal-debate-2026-05-17.md -text whitespace=cr-at-eol
+debates/mao-vs-chiang/free-dialogue-2026-05-19.md -text whitespace=cr-at-eol
+debates/mao-vs-chiang/free-dialogue-prompt.md -text
+debates/mao-vs-chiang/inputs/2026-05-17/skill-a-chiang-kai-shek/SKILL.md -text
+debates/mao-vs-chiang/inputs/2026-05-17/skill-b-mao-zedong/SKILL.md -text

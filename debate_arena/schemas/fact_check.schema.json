@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FactCheckReport",
+  "type": "object",
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "speaker", "risk_type", "risk_level", "comment"],
+        "properties": {
+          "claim": {"type": "string"},
+          "speaker": {"type": "string"},
+          "risk_type": {"type": "string"},
+          "risk_level": {"type": "string"},
+          "comment": {"type": "string"}
+        }
+      }
+    }
+  }
+}

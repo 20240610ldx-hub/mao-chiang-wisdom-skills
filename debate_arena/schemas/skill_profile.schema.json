@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SkillProfile",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "name",
+    "core_worldview",
+    "core_values",
+    "preferred_methods",
+    "strategic_assumptions",
+    "rhetorical_style",
+    "likely_debate_strengths",
+    "likely_debate_weaknesses",
+    "forbidden_behaviors",
+    "factual_boundaries"
+  ],
+  "properties": {
+    "skill_id": {"type": "string"},
+    "name": {"type": "string"},
+    "domain": {"type": ["string", "null"]},
+    "core_worldview": {"type": "array", "items": {"type": "string"}},
+    "core_values": {"type": "array", "items": {"type": "string"}},
+    "preferred_methods": {"type": "array", "items": {"type": "string"}},
+    "strategic_assumptions": {"type": "array", "items": {"type": "string"}},
+    "rhetorical_style": {"type": "array", "items": {"type": "string"}},
+    "likely_debate_strengths": {"type": "array", "items": {"type": "string"}},
+    "likely_debate_weaknesses": {"type": "array", "items": {"type": "string"}},
+    "forbidden_behaviors": {"type": "array", "items": {"type": "string"}},
+    "factual_boundaries": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

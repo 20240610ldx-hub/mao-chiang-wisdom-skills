@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "canonical_skills": {
+    "chiang_kai_shek": {
+      "path": "../../skills/chiang-kai-shek-wisdom/SKILL.md",
+      "sha256": "4D64DCADB046A4FF844C66ED6AD0AC51A7F8D87ED78BD07667F0CD1438BA5CBF"
+    },
+    "mao_zedong": {
+      "path": "../../skills/mao-zedong-wisdom/SKILL.md",
+      "sha256": "6739315363E44AC65F9274BAAF621357D73CEEF4EAA234EE2F8E4F79A10B14A3"
+    }
+  },
+  "archived_run_inputs": {
+    "skill_a_chiang_kai_shek": {
+      "path": "inputs/2026-05-17/skill-a-chiang-kai-shek/SKILL.md",
+      "bytes": 77330,
+      "sha256": "1F84770DBB955B9A30D1B4D6393AFABDC82D6F01E5C0548A69F16C14D6AC87D3"
+    },
+    "skill_b_mao_zedong": {
+      "path": "inputs/2026-05-17/skill-b-mao-zedong/SKILL.md",
+      "bytes": 63639,
+      "sha256": "DC804C19A1B58CF82FA16822C0F73E5B28354CFDABBFBD8B7F3D56D9394069E2"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "formal-debate-2026-05-17.md",
+      "bytes": 39393,
+      "sha256": "0BB06C319071A274046400201E5B88AE6569B64AAD69FF741A6AFABC6AF5B42E",
+      "generated_at": "2026-05-17T03:38:49+00:00",
+      "model": "deepseek-v4-pro",
+      "fact_check": "disabled",
+      "judge": "enabled",
+      "judge_result": {
+        "side_a_chiang_kai_shek": 86,
+        "side_b_mao_zedong": 85
+      }
+    },
+    {
+      "path": "free-dialogue-2026-05-19.md",
+      "bytes": 5265,
+      "sha256": "4339706230D96A234D82753128D910D4D2B07D114E98DC14D9911441B09753C7",
+      "generated_at": "2026-05-19T18:21:13",
+      "model": "deepseek-v4-pro",
+      "fact_check": "not_run",
+      "judge": "not_run",
+      "prompt": {
+        "path": "free-dialogue-prompt.md",
+        "bytes": 2366,
+        "sha256": "2134DDC3B0931EB70D1B5F088277274D473A291D97D1B1FD8E3231D94016CCB9"
+      }
+    }
+  ],
+  "notes": [
+    "Archived run inputs are provenance-only and are not the canonical installable Skills.",
+    "Absolute local paths retained in an original artifact describe the generation environment only.",
+    "Automated judge scores characterize one generated transcript under one model rubric."
+  ]
+}

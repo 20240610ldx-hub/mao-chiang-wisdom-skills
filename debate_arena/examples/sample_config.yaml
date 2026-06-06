@@ -1,0 +1,20 @@
+arena:
+  name: Mao + Chiang Debate Arena
+  version: 0.2.0
+
+input:
+  skill_a_path: ./skills/chiang-kai-shek-wisdom/SKILL.md
+  skill_b_path: ./skills/mao-zedong-wisdom/SKILL.md
+
+runtime:
+  language: zh-CN
+  topic_mode: auto
+  issue_count: 4
+  word_limit: 600
+  cross_exam_questions_each: 2
+  enable_fact_check: false
+  enable_judge: true
+  llm_provider: openai
+
+output:
+  markdown_path: ./output/debate_arena/mao-vs-chiang.md

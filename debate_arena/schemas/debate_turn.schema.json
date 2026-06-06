@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DebateTurn",
+  "type": "object",
+  "required": ["round_id", "round_name", "speaker", "prompt_question", "answer"],
+  "properties": {
+    "round_id": {"type": "string"},
+    "round_name": {"type": "string"},
+    "speaker": {"type": "string"},
+    "prompt_question": {"type": "string"},
+    "answer": {"type": "string"},
+    "referenced_issue_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}
