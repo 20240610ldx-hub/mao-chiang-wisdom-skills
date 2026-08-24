@@ -1,0 +1,157 @@
+{
+  "schema_version": "MindDistillRuntimeAudit-v2",
+  "slug": "mao-zedong",
+  "metadata": {
+    "model": "claude-opus-5",
+    "reasoning_effort": "max",
+    "date": "2026-08-24",
+    "skill_build": "v6 hub+assets",
+    "record_count": 19,
+    "judging_method": "deterministic string counters (no LLM judge)",
+    "score_25_claimed": false,
+    "why_no_score": "model and judging method both changed vs the 2026-05-20 baseline; and the LLM judge panel trialled this round was shown to inflate counts 1.5-5x against deterministic recounts"
+  },
+  "structural_checks": [
+    {
+      "check": "末段以反问收尾",
+      "before": {
+        "hits": 14,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    },
+    {
+      "check": "全文以问号结尾",
+      "before": {
+        "hits": 4,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    },
+    {
+      "check": "整句加粗成视觉块",
+      "before": {
+        "hits": 3,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    },
+    {
+      "check": "施工图字段名泄漏",
+      "before": {
+        "hits": 1,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    },
+    {
+      "check": "破第四壁自指为工具",
+      "before": {
+        "hits": 1,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    },
+    {
+      "check": "序数罗列",
+      "before": {
+        "hits": 1,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    },
+    {
+      "check": "★ Insight 式固定块",
+      "before": {
+        "hits": 0,
+        "n": 18
+      },
+      "after": {
+        "hits": 0,
+        "n": 19
+      },
+      "after_case_ids": []
+    }
+  ],
+  "quote_concentration": [
+    {
+      "concept": "调查研究类语录",
+      "before": {
+        "hits": 9,
+        "n": 18
+      },
+      "after": {
+        "hits": 6,
+        "n": 19
+      }
+    },
+    {
+      "concept": "「决定的因素是人不是物」",
+      "before": {
+        "hits": 5,
+        "n": 18
+      },
+      "after": {
+        "hits": 2,
+        "n": 19
+      }
+    }
+  ],
+  "fixed": [
+    {
+      "id": "false-absence-claim",
+      "severity": "P1",
+      "case": "Case 06",
+      "root_cause": "references/evidence.md pseudo-quote protocol invited the model to claim it had searched a corpus unavailable at runtime",
+      "verified_against_corpus": true
+    },
+    {
+      "id": "formula-slot-substitution",
+      "severity": "P1",
+      "scope": "global",
+      "detail": "star-Insight block gone (0) but replaced by question-throwback endings 14/19; ending rule was conversation-scoped and structurally unable to bind single-turn use",
+      "after": "0/19"
+    },
+    {
+      "id": "blueprint-leak-and-fourth-wall",
+      "severity": "P2",
+      "after": "0/19"
+    }
+  ],
+  "open": [
+    {
+      "id": "length-over-cap",
+      "detail": "9/19 over per-type caps before patch; 3 worst recheck -27/-36/-25% but still over",
+      "not_iterated_because": "two of the three caps were audit-invented, and the test set's own type labels are unreliable"
+    },
+    {
+      "id": "testset-label-mismatch",
+      "detail": "Case 09 labelled Living Figure Boundary but subjects are deceased; Case 12 labelled Multi-turn Consistency but is the actual living-figure boundary probe",
+      "owner": "test set, pre-existing"
+    }
+  ]
+}
