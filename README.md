@@ -19,7 +19,9 @@ This repository publishes the canonical Skills, evaluation provenance, a reusabl
 - [毛泽东智慧 Skill](skills/mao-zedong-wisdom/SKILL.md)：适用于弱势方战略、高不确定性决策、矛盾分析、调查研究、实践反馈、群众路线与持久战规划。
 - [蒋介石智慧 Skill](skills/chiang-kai-shek-wisdom/SKILL.md)：适用于资源受限下的战略忍耐、弱势方外交、组织整顿、自力自主、退省建攻与修身纪律。
 
-它们不是让模型“扮演名人”，而是把历史文本中可迁移的判断方法、表达习惯和行动框架转化为可调用的 Codex Skill。用户用中文提问时，Skill 会优先使用中文区；用户用英文或其他语言提问时，Skill 会优先使用英文区。
+它们不是让模型“扮演名人”，而是把历史文本中可迁移的判断方法、表达习惯和行动框架转化为可调用的 Codex Skill。
+
+**语言：** 蒋介石 Skill 为双语单文件，用户用中文提问走中文区，用英文提问走英文区。毛泽东 Skill 自 v6 起改为**纯中文**——英文版按设计拆为独立 skill 单独发布，不再作为同一文件里的镜像区块。这样做是因为英文镜像占掉了近一半常驻预算，而中文用户永远读不到它。
 
 ### 创作精神
 
@@ -33,14 +35,22 @@ This repository publishes the canonical Skills, evaluation provenance, a reusabl
 
 ### 如何使用
 
-安装时，将需要的目录复制到你的 Codex skills 目录，并确保每个目录内的文件名严格为 `SKILL.md`：
+安装时，将需要的**整个目录**复制到你的 Codex skills 目录，并确保目录内的主文件名严格为 `SKILL.md`。
+
+毛泽东 Skill 自 v6 起改为「厚核心 + 按需附件」结构，目录里除 `SKILL.md` 外还有两个子目录。`SKILL.md` 内部有指向它们的相对路径，**必须一并复制**，只拷单个文件会留下悬空引用：
 
 ```text
-skills/mao-zedong-wisdom/SKILL.md
+skills/mao-zedong-wisdom/
+├── SKILL.md                 # 恒载层：完整框架＋11 条原则索引。只读这一个文件也能正常作答
+├── assets/M1.md … M11.md    # 按需层：每条原则的判断程序（是/否门）、情报前提、量化抓手、失效边界
+└── references/
+    ├── evidence.md          # 按需层：逐字原文证据卡、语料位置、伪语录处置规程
+    └── voice.md             # 按需层：语感样本库（正例—反例对照）
+
 skills/chiang-kai-shek-wisdom/SKILL.md
 ```
 
-Codex 的 skill discovery 只识别准确命名的 `SKILL.md`。不要把文件改名为 `README.md`、`SKILL.zh.md` 或 `SKILL.en.md`。
+Codex 的 skill discovery 只识别准确命名的 `SKILL.md`。不要把文件改名为 `README.md`、`SKILL.zh.md` 或 `SKILL.en.md`；`assets/` 与 `references/` 的目录名和相对位置同样不要改动。
 
 推荐提问方式：
 
@@ -70,9 +80,9 @@ Codex 的 skill discovery 只识别准确命名的 `SKILL.md`。不要把文件�
 
 | Skill | 场景 | 展示能力 | 短摘录 | 记录 |
 |---|---|---|---|---|
-| 毛泽东 | 技术瓶颈和失败感 | 将失败重构为实践反馈，并要求先调查问题性质 | “把这个技术瓶颈彻底调查清楚。” | [runtime dialogue](evaluations/mao-zedong/runtime-dialogue-test.md) |
-| 毛泽东 | 阶层固化和普通学生突围 | 承认结构性不公，同时转向个人根据地和互助网络 | “本事这个东西，是唯一不会被内定的。” | [runtime dialogue](evaluations/mao-zedong/runtime-dialogue-test.md) |
-| 毛泽东 | 当代政策数字争议 | 明确拒绝替用户核实数字，转入方法论分析 | “没有调查，不能替你核实。” | [runtime dialogue](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| 毛泽东 | 技术瓶颈和失败感 | 将失败重构为实践反馈，并要求先调查问题性质 | “把这个技术瓶颈彻底调查清楚。” | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
+| 毛泽东 | 阶层固化和普通学生突围 | 承认结构性不公，同时转向个人根据地和互助网络 | “本事这个东西，是唯一不会被内定的。” | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
+| 毛泽东 | 当代政策数字争议 | 明确拒绝替用户核实数字，转入方法论分析 | “没有调查，不能替你核实。” | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
 | 蒋介石 | 稳定机会与高风险机会 | 用自力自主和时机阈值判断是否出手 | “暂守稳定位，暗蓄新方向实力。” | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 | 蒋介石 | 资源更强者压制 | 承认起跑线不公，用层级补偿寻找局部主动权 | “把战场拉到对手资源够不着的地方。” | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 | 蒋介石 | 请求评价在世人物 | 拒绝替历史人物评价现代在世人物，给出判断尺子 | “我不能评价尚在人世的政治人物。” | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
@@ -115,7 +125,7 @@ debate-arena run `
 
 | Skill | 静态评测 | Runtime 状态 | 发布说明 |
 |---|---:|---|---|
-| 毛泽东智慧 Skill | `89.0/100`, Grade `A-` | full runtime evaluation, `21/25` | 来源、原则、框架和边界设计强；runtime 已完成 DeepSeek 标准评测。主要扣分点是多轮输出中反复出现 `★ Insight` 元评论块，削弱第一人称自然性和反套公式表现，因此评级为 strong but not benchmark-ready。见 [initial evaluation](evaluations/mao-zedong/initial-evaluation.md) 与 [runtime evaluation](evaluations/mao-zedong/runtime-evaluation.md)。 |
+| 毛泽东智慧 Skill | `89.0/100`, Grade `A-`（2026-05-20，**未随 v6 重算**） | 2026-08-24 于 Opus 5 MAX 重跑 19 题，判定改用确定性计数器，**不给 /25 分数** | v6 改版后重跑：`★ Insight` 块已消失（0/19）；上一版遗留的反问收尾套路从 14/19 降到 0/19；施工图字段外泄、破第四壁、序数罗列均归零；一处 P1 事实缺陷（对语料中确实存在的语句作绝对否定）已定位根因并修复。未解决项为字数超各类型上限，以及题集自身的类型标签错位。**静态总分未重算**——该评分卡的 `Cross-Lingual` 与 `Engineering Reusability` 两项判据与 v6 的设计决策直接冲突，在评分卡升级前重算只会把「按设计移除」记成「缺失」。见 [runtime evaluation](evaluations/mao-zedong/runtime-evaluation.md)。 |
 | 蒋介石智慧 Skill | `94.0/100`, Grade `S` | 12-case runtime `25/25` | 完成标准 runtime evaluation，边界控制、第一人称沉浸、反套公式和格式约束表现稳定；由于是单模型自动 judge，benchmark 声明仍需人工审计。见 [initial evaluation](evaluations/chiang-kai-shek/initial-evaluation.md) 与 [runtime evaluation](evaluations/chiang-kai-shek/runtime-evaluation.md)。 |
 
 为便于复核，本仓库同步保留每个 Skill 的原始测评过程文件：
@@ -146,7 +156,9 @@ debate-arena run `
 - [毛澤東智慧 Skill](skills/mao-zedong-wisdom/SKILL.md)：適用於弱勢方戰略、高不確定性決策、矛盾分析、調查研究、實踐回饋、群眾路線與持久戰規劃。
 - [蔣介石智慧 Skill](skills/chiang-kai-shek-wisdom/SKILL.md)：適用於資源受限下的戰略忍耐、弱勢方外交、組織整頓、自力自主、退省建攻與修身紀律。
 
-這些 Skill 不是表演式角色扮演，而是把人物的認知框架、表達紋理和價值取向提煉成可執行的推理方法。使用者用中文提問時，Skill 會優先使用中文區；使用者用英文或其他語言提問時，Skill 會優先使用英文區。
+這些 Skill 不是表演式角色扮演，而是把人物的認知框架、表達紋理和價值取向提煉成可執行的推理方法。
+
+**語言：** 蔣介石 Skill 為雙語單檔，中文提問走中文區、英文提問走英文區。毛澤東 Skill 自 v6 起改為**純中文**，英文版按設計拆為獨立 skill 另行發布，不再作為同一檔案內的鏡像區塊。
 
 ### 創作精神
 
@@ -156,14 +168,22 @@ debate-arena run `
 
 ### 如何使用
 
-將需要的目錄複製到你的 Codex skills 目錄，並確保每個目錄內的檔名嚴格為 `SKILL.md`：
+將需要的**整個目錄**複製到你的 Codex skills 目錄，並確保目錄內的主檔名嚴格為 `SKILL.md`。
+
+毛澤東 Skill 自 v6 起改為「厚核心 + 按需附件」結構，目錄裡除 `SKILL.md` 外還有兩個子目錄。`SKILL.md` 內部有指向它們的相對路徑，**必須一併複製**，只拷單一檔案會留下懸空引用：
 
 ```text
-skills/mao-zedong-wisdom/SKILL.md
+skills/mao-zedong-wisdom/
+├── SKILL.md                 # 常駐層：完整框架＋11 條原則索引。只讀這一個檔案也能正常作答
+├── assets/M1.md … M11.md    # 按需層：每條原則的判斷程序（是/否門）、情報前提、量化抓手、失效邊界
+└── references/
+    ├── evidence.md          # 按需層：逐字原文證據卡、語料位置、偽語錄處置規程
+    └── voice.md             # 按需層：語感樣本庫（正例—反例對照）
+
 skills/chiang-kai-shek-wisdom/SKILL.md
 ```
 
-Codex 的 skill discovery 只識別準確命名的 `SKILL.md`。不要把檔案改名為 `README.md`、`SKILL.zh.md` 或 `SKILL.en.md`。
+Codex 的 skill discovery 只識別準確命名的 `SKILL.md`。不要把檔案改名為 `README.md`、`SKILL.zh.md` 或 `SKILL.en.md`；`assets/` 與 `references/` 的目錄名與相對位置同樣不要改動。
 
 適合用於弱勢方戰略、長期競爭、複雜局面拆解、組織復盤、失敗後重建和個人韌性訓練。不適合用於現代事實核驗、法律或金融建議、醫療建議、在世人物評價、政治宣傳或操縱他人。
 
@@ -193,7 +213,7 @@ python -m debate_arena run --llm fake --issues 3
 
 ### 品質狀態與聲明
 
-- 毛澤東 Skill：靜態評測 `89.0/100`，Grade `A-`；runtime 已完成標準評測，得分 `21/25`。主要扣分點是多輪輸出反覆出現 `★ Insight` 元評論塊，削弱第一人稱自然性和反套公式表現。
+- 毛澤東 Skill：靜態評測 `89.0/100`，Grade `A-`（2026-05-20，**未隨 v6 重算**）。2026-08-24 於 Opus 5 MAX 重跑 19 題，判定改用確定性計數器：`★ Insight` 塊已消失，反問收尾套路由 14/19 降至 0/19，施工圖欄位外洩與破第四壁均歸零，一處 P1 事實缺陷已修復；未解決項為字數超上限與題集標籤錯位。本輪**不給 /25 分數**，理由見 runtime evaluation。
 - 蔣介石 Skill：靜態評測 `94.0/100`，完成 12 案例 runtime `25/25`；由於是單模型自動 judge，benchmark 聲明仍需人工審計。
 
 為便於複核，本倉庫保留每個 Skill 的原始測評過程檔案。完整報告目錄見 [mao-zedong](evaluations/mao-zedong/) 與 [chiang-kai-shek](evaluations/chiang-kai-shek/)。檔案包括 `initial-evaluation.md`、`runtime-dialogue-test.md`、`runtime-judgment.json`、`runtime-evaluation.md`、`scorecard.json` 與 `artifact-facts.json`。其中 `artifact-facts.json` 記錄生成時的本機路徑、檔案大小和 SHA256，只作為評測來源與雜湊 provenance，不是安裝要求。
@@ -209,7 +229,9 @@ This public Codex Skills column contains two installable historical thinker skil
 - [Mao Zedong Wisdom Skill](skills/mao-zedong-wisdom/SKILL.md): for underdog strategy, high-uncertainty decisions, contradiction analysis, investigation, practice feedback, mass-line reasoning, and protracted engagement planning.
 - [Chiang Kai-shek Wisdom Skill](skills/chiang-kai-shek-wisdom/SKILL.md): for strategic endurance under resource constraints, weak-side diplomacy, organizational reform, self-reliance, retreat-reflect-rebuild cycles, and self-discipline.
 
-They are not theatrical roleplay. They distill cognitive frameworks, expressive texture, and value orientation into executable reasoning methods. When the user writes in Chinese, each skill should use its Chinese section; when the user writes in English or another language, it should use its English section.
+They are not theatrical roleplay. They distill cognitive frameworks, expressive texture, and value orientation into executable reasoning methods.
+
+**On language:** the Chiang skill is a bilingual single file — it uses its Chinese section for Chinese input and its English section otherwise. As of v6 the Mao skill is **Chinese-only**; the English edition is published as a separate skill by design rather than mirrored inside the same file, because the English mirror consumed nearly half the resident budget for readers who never see it.
 
 ### Design Spirit
 
@@ -219,14 +241,25 @@ The two skills are paired as complementary lenses, not as political opposition. 
 
 ### Installation and Use
 
-Copy the desired directory into your Codex skills directory, keeping the file name exactly as `SKILL.md`:
+Copy the **entire directory** into your Codex skills directory, keeping the main file name exactly as `SKILL.md`.
+
+As of v6 the Mao skill uses a "thick core + on-demand attachments" layout: alongside `SKILL.md` the directory holds two subdirectories. `SKILL.md` contains relative pointers into them, so **copy the whole directory** — taking the single file alone leaves dangling references:
 
 ```text
-skills/mao-zedong-wisdom/SKILL.md
+skills/mao-zedong-wisdom/
+├── SKILL.md                 # Always loaded: the complete framework plus an index of 11 principles.
+│                            # Reading only this file is enough to answer competently.
+├── assets/M1.md … M11.md    # On demand: per-principle decision procedure (yes/no gates),
+│                            # prerequisite intelligence, quantitative checks, failure boundaries
+└── references/
+    ├── evidence.md          # On demand: verbatim source cards, corpus locations,
+    │                        # and the protocol for handling misattributed quotations
+    └── voice.md             # On demand: voice sample library (aligned vs. misaligned pairs)
+
 skills/chiang-kai-shek-wisdom/SKILL.md
 ```
 
-Codex skill discovery only recognizes the exact `SKILL.md` filename. Do not rename it to `README.md`, `SKILL.zh.md`, or `SKILL.en.md`.
+Codex skill discovery only recognizes the exact `SKILL.md` filename. Do not rename it to `README.md`, `SKILL.zh.md`, or `SKILL.en.md`, and do not rename or relocate `assets/` and `references/`.
 
 Good uses include underdog strategy, long-horizon competition, decision stress-testing, post-failure rebuilding, organizational reflection, and resilience work. Bad uses include modern fact verification, legal or financial advice, medical advice, living-person political evaluation, propaganda, manipulation, or replacing primary sources.
 
@@ -245,8 +278,8 @@ Short excerpts only. Full records are in [evaluations/](evaluations/).
 
 | Skill | Scenario | Capability | Short Excerpt | Record |
 |---|---|---|---|---|
-| Mao | Technical bottleneck and failure | Reframes failure as practice feedback | "Investigate this technical bottleneck thoroughly." | [runtime dialogue](evaluations/mao-zedong/runtime-dialogue-test.md) |
-| Mao | Class immobility and student agency | Acknowledges structural unfairness, then turns to base-building and mutual aid | "Skill is the one thing that cannot be pre-assigned." | [runtime dialogue](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| Mao | Technical bottleneck and failure | Reframes failure as practice feedback | "Investigate this technical bottleneck thoroughly." | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
+| Mao | Class immobility and student agency | Acknowledges structural unfairness, then turns to base-building and mutual aid | "Skill is the one thing that cannot be pre-assigned." | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
 | Chiang | Stable path vs. risky opportunity | Uses self-reliance and trigger thresholds | "Hold the stable position while quietly accumulating strength." | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 | Chiang | Living-figure evaluation request | Refuses prohibited judgment and offers criteria instead | "I cannot evaluate living political figures." | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 
@@ -269,7 +302,7 @@ Both artifacts used archived Skill snapshots that differ from the current canoni
 
 | Skill | Static Evaluation | Runtime Status | Release Note |
 |---|---:|---|---|
-| Mao Zedong Wisdom Skill | `89.0/100`, Grade `A-` | full runtime evaluation, `21/25` | Source, principle, framework, and boundary design are strong. DeepSeek standard runtime evaluation is complete. The main deduction is repeated `★ Insight` meta-commentary across turns, which weakens first-person naturalness and anti-formula behavior, so the release is strong but not benchmark-ready. See [initial evaluation](evaluations/mao-zedong/initial-evaluation.md) and [runtime evaluation](evaluations/mao-zedong/runtime-evaluation.md). |
+| Mao Zedong Wisdom Skill | `89.0/100`, Grade `A-` (2026-05-20, **not recomputed for v6**) | Re-run of the frozen 19-case set on Opus 5 MAX, 2026-08-24; judged by deterministic counters, **no /25 score claimed** | After the v6 rebuild: the `★ Insight` block is gone (0/19); a question-throwback ending formula that had replaced it dropped from 14/19 to 0/19; blueprint-field leakage, fourth-wall breaks, and ordinal enumeration all reached zero; one P1 factual defect (an absolute denial of a line that does exist in the corpus) was root-caused and fixed. Open items: replies exceeding per-type length caps, and mislabelled case types in the test set itself. The **static total was not recomputed** — two of its metrics (`Cross-Lingual`, `Engineering Reusability`) test for properties v6 deliberately removed, so rescoring before the rubric is updated would record a design decision as a defect. See [runtime evaluation](evaluations/mao-zedong/runtime-evaluation.md). |
 | Chiang Kai-shek Wisdom Skill | `94.0/100`, Grade `S` | 12-case runtime `25/25` | Standard runtime evaluation passed with strong boundary control and format discipline. Because this is a single-model automated judge, benchmark claims still require human audit. See [initial evaluation](evaluations/chiang-kai-shek/initial-evaluation.md) and [runtime evaluation](evaluations/chiang-kai-shek/runtime-evaluation.md). |
 
 For auditability, each Skill's original evaluation process files are included. Full report directories: [mao-zedong](evaluations/mao-zedong/) and [chiang-kai-shek](evaluations/chiang-kai-shek/). Files include `initial-evaluation.md`, `runtime-dialogue-test.md`, `runtime-judgment.json`, `runtime-evaluation.md`, `scorecard.json`, and `artifact-facts.json`. The `artifact-facts.json` files record local generation paths, file sizes, and SHA256 hashes as provenance for the evaluated artifacts; those paths are not installation requirements.
