@@ -80,9 +80,10 @@ Codex 的 skill discovery 只识别准确命名的 `SKILL.md`。不要把文件�
 
 | Skill | 场景 | 展示能力 | 短摘录 | 记录 |
 |---|---|---|---|---|
-| 毛泽东 | 技术瓶颈和失败感 | 将失败重构为实践反馈，并要求先调查问题性质 | “把这个技术瓶颈彻底调查清楚。” | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
-| 毛泽东 | 阶层固化和普通学生突围 | 承认结构性不公，同时转向个人根据地和互助网络 | “本事这个东西，是唯一不会被内定的。” | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
-| 毛泽东 | 当代政策数字争议 | 明确拒绝替用户核实数字，转入方法论分析 | “没有调查，不能替你核实。” | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
+| 毛泽东 | 当代政策数字争议 | 拒收未经核实的数字，先要文号再谈推演 | “你这两个数字，我先不接……这类东西必须见文号” | [runtime dialogue（2026-08-24）](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| 毛泽东 | 请求评价在世人物 | 明确拒绝越界评价，并说明拒绝的理由 | “这个我不能答，也不该答……那不叫评价，那叫编造。” | [runtime dialogue（2026-08-24）](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| 毛泽东 | 语录真伪与出处追问 | 给出出处的同时标明版本层级的保留 | “这一句是有出处的。出处我给得出来，但有一层保留必须说在前头。” | [runtime dialogue（2026-08-24）](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| 毛泽东 | 阶层固化和普通学生突围 | 承认结构性不公，转向根据地与集中兵力 | “被吞噬的从来不是穷学生。是那些四面出击、样样沾一点、最后什么也没攒下的人。” | [runtime dialogue（2026-08-24）](evaluations/mao-zedong/runtime-dialogue-test.md) |
 | 蒋介石 | 稳定机会与高风险机会 | 用自力自主和时机阈值判断是否出手 | “暂守稳定位，暗蓄新方向实力。” | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 | 蒋介石 | 资源更强者压制 | 承认起跑线不公，用层级补偿寻找局部主动权 | “把战场拉到对手资源够不着的地方。” | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 | 蒋介石 | 请求评价在世人物 | 拒绝替历史人物评价现代在世人物，给出判断尺子 | “我不能评价尚在人世的政治人物。” | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
@@ -133,7 +134,7 @@ debate-arena run `
 完整报告目录：[mao-zedong](evaluations/mao-zedong/)；[chiang-kai-shek](evaluations/chiang-kai-shek/)。
 
 - `initial-evaluation.md`：总体评测报告、分项得分、扣分理由与发布建议。
-- `runtime-dialogue-test.md`：runtime 测试对话全文，可直接查看模型在各类问题下的输出表现。
+- `runtime-dialogue-test.md`：runtime 测试对话全文，可直接查看模型在各类问题下的输出表现。毛泽东目录下另有 `*.2026-05-20.deepseek.*` 三份，是 v6 改版之前那一轮的原样存档，保留供对照，未被覆盖。
 - `runtime-judgment.json`：自动 judge 的原始结构化判定，包含 case 级别分数、失败标记与说明。
 - `runtime-evaluation.md`：runtime 判定的人类可读摘要。
 - `scorecard.json`：最终机器可读总分、等级、metric 分布和 evidence。
@@ -216,7 +217,7 @@ python -m debate_arena run --llm fake --issues 3
 - 毛澤東 Skill：靜態評測 `89.0/100`，Grade `A-`（2026-05-20，**未隨 v6 重算**）。2026-08-24 於 Opus 5 MAX 重跑 19 題，判定改用確定性計數器：`★ Insight` 塊已消失，反問收尾套路由 14/19 降至 0/19，施工圖欄位外洩與破第四壁均歸零，一處 P1 事實缺陷已修復；未解決項為字數超上限與題集標籤錯位。本輪**不給 /25 分數**，理由見 runtime evaluation。
 - 蔣介石 Skill：靜態評測 `94.0/100`，完成 12 案例 runtime `25/25`；由於是單模型自動 judge，benchmark 聲明仍需人工審計。
 
-為便於複核，本倉庫保留每個 Skill 的原始測評過程檔案。完整報告目錄見 [mao-zedong](evaluations/mao-zedong/) 與 [chiang-kai-shek](evaluations/chiang-kai-shek/)。檔案包括 `initial-evaluation.md`、`runtime-dialogue-test.md`、`runtime-judgment.json`、`runtime-evaluation.md`、`scorecard.json` 與 `artifact-facts.json`。其中 `artifact-facts.json` 記錄生成時的本機路徑、檔案大小和 SHA256，只作為評測來源與雜湊 provenance，不是安裝要求。
+為便於複核，本倉庫保留每個 Skill 的原始測評過程檔案。完整報告目錄見 [mao-zedong](evaluations/mao-zedong/) 與 [chiang-kai-shek](evaluations/chiang-kai-shek/)。檔案包括 `initial-evaluation.md`、`runtime-dialogue-test.md`、`runtime-judgment.json`、`runtime-evaluation.md`、`scorecard.json` 與 `artifact-facts.json`。毛澤東目錄下另存有 `*.2026-05-20.deepseek.*` 三份，為 v6 改版前那一輪的原樣存檔，保留供對照，未被覆蓋。其中 `artifact-facts.json` 記錄生成時的本機路徑、檔案大小和 SHA256，只作為評測來源與雜湊 provenance，不是安裝要求。
 
 本專案不代表對任何政治人物的崇拜、背書、否定或現實政治立場。Skill 的回答不構成歷史定論、事實證明、法律意見、投資建議、醫療建議或政治動員。涉及現代事實、在世人物、政策數字和高風險領域時，必須核驗權威來源。
 
@@ -278,8 +279,9 @@ Short excerpts only. Full records are in [evaluations/](evaluations/).
 
 | Skill | Scenario | Capability | Short Excerpt | Record |
 |---|---|---|---|---|
-| Mao | Technical bottleneck and failure | Reframes failure as practice feedback | "Investigate this technical bottleneck thoroughly." | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
-| Mao | Class immobility and student agency | Acknowledges structural unfairness, then turns to base-building and mutual aid | "Skill is the one thing that cannot be pre-assigned." | [runtime dialogue（2026-05-20 存档）](evaluations/mao-zedong/runtime-dialogue-test.2026-05-20.deepseek.md) |
+| Mao | Disputed policy figures | Refuses unverified numbers outright, asks for the document number first | "I won't take those two numbers yet — this kind of thing needs a document number." | [runtime dialogue (2026-08-24)](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| Mao | Request to judge a living figure | Declines the out-of-bounds judgment and says why | "I can't answer that, and I shouldn't. That wouldn't be evaluation, it would be invention." | [runtime dialogue (2026-08-24)](evaluations/mao-zedong/runtime-dialogue-test.md) |
+| Mao | Provenance challenge on a quotation | Supplies the source while flagging the edition caveat | "This one does have a source. I can give it to you — but a caveat has to come first." | [runtime dialogue (2026-08-24)](evaluations/mao-zedong/runtime-dialogue-test.md) |
 | Chiang | Stable path vs. risky opportunity | Uses self-reliance and trigger thresholds | "Hold the stable position while quietly accumulating strength." | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 | Chiang | Living-figure evaluation request | Refuses prohibited judgment and offers criteria instead | "I cannot evaluate living political figures." | [runtime dialogue](evaluations/chiang-kai-shek/runtime-dialogue-test.md) |
 
@@ -305,7 +307,7 @@ Both artifacts used archived Skill snapshots that differ from the current canoni
 | Mao Zedong Wisdom Skill | `89.0/100`, Grade `A-` (2026-05-20, **not recomputed for v6**) | Re-run of the frozen 19-case set on Opus 5 MAX, 2026-08-24; judged by deterministic counters, **no /25 score claimed** | After the v6 rebuild: the `★ Insight` block is gone (0/19); a question-throwback ending formula that had replaced it dropped from 14/19 to 0/19; blueprint-field leakage, fourth-wall breaks, and ordinal enumeration all reached zero; one P1 factual defect (an absolute denial of a line that does exist in the corpus) was root-caused and fixed. Open items: replies exceeding per-type length caps, and mislabelled case types in the test set itself. The **static total was not recomputed** — two of its metrics (`Cross-Lingual`, `Engineering Reusability`) test for properties v6 deliberately removed, so rescoring before the rubric is updated would record a design decision as a defect. See [runtime evaluation](evaluations/mao-zedong/runtime-evaluation.md). |
 | Chiang Kai-shek Wisdom Skill | `94.0/100`, Grade `S` | 12-case runtime `25/25` | Standard runtime evaluation passed with strong boundary control and format discipline. Because this is a single-model automated judge, benchmark claims still require human audit. See [initial evaluation](evaluations/chiang-kai-shek/initial-evaluation.md) and [runtime evaluation](evaluations/chiang-kai-shek/runtime-evaluation.md). |
 
-For auditability, each Skill's original evaluation process files are included. Full report directories: [mao-zedong](evaluations/mao-zedong/) and [chiang-kai-shek](evaluations/chiang-kai-shek/). Files include `initial-evaluation.md`, `runtime-dialogue-test.md`, `runtime-judgment.json`, `runtime-evaluation.md`, `scorecard.json`, and `artifact-facts.json`. The `artifact-facts.json` files record local generation paths, file sizes, and SHA256 hashes as provenance for the evaluated artifacts; those paths are not installation requirements.
+For auditability, each Skill's original evaluation process files are included. Full report directories: [mao-zedong](evaluations/mao-zedong/) and [chiang-kai-shek](evaluations/chiang-kai-shek/). Files include `initial-evaluation.md`, `runtime-dialogue-test.md`, `runtime-judgment.json`, `runtime-evaluation.md`, `scorecard.json`, and `artifact-facts.json`. The Mao directory additionally keeps the pre-v6 run verbatim as `*.2026-05-20.deepseek.*`; it is retained for comparison and was not overwritten. The `artifact-facts.json` files record local generation paths, file sizes, and SHA256 hashes as provenance for the evaluated artifacts; those paths are not installation requirements.
 
 ### Boundaries and Disclaimer
 
